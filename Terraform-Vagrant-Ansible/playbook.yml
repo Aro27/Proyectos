@@ -1,0 +1,31 @@
+# playbook.yml
+- name: Configurar Ubuntu 22.04 con Apache
+  hosts: all
+  become: yes
+  tasks:
+    - name: Actualizar lista de paquetes
+      apt:
+        update_cache: yes
+
+    - name: Actualizar el sistema
+      apt:
+        upgrade: dist
+        autoremove: yes
+
+    - name: Instalar Apache
+      apt:
+        name: apache2
+        state: present
+        
+    - name: Crear index.html con contenido personalizado
+      copy:
+        dest: /var/www/html/index.html
+        content: "Ansible rocks\n"
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
+    - name: Reiniciar Apache para aplicar cambios
+      service:
+        name: apache2
+        state: restarted
