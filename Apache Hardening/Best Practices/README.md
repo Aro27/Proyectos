@@ -4,7 +4,7 @@ Este repositorio contiene un Dockerfile configurado para mejorar la seguridad de
 
 ## Descripción
 
-El archivo [Dockerfile](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA3/RA3_1/RA3_1_3/Apache%20_Hardening%20_Best%20_Practices/Dockerfile) en este repositorio implementa varias medidas de seguridad para endurecer un servidor web Apache en un entorno Docker.
+El archivo [Dockerfile](https://github.com/Aro27/Proyectos/blob/main/Apache%20Hardening/Best%20Practices/Apache%20_Hardening%20_Best%20_Practices/Dockerfile) en este repositorio implementa varias medidas de seguridad para endurecer un servidor web Apache en un entorno Docker.
 
 ## Configuraciones de Seguridad Aplicadas
 
