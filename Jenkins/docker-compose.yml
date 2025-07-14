@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  calculadora:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: calculadora_container

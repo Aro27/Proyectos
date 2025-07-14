@@ -1,0 +1,57 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clonar repo') {
+            steps {
+                git branch: 'main', url: 'https://github.com/alvaromespen/pps-10003375.git'
+            }
+        }
+
+        stage('Construir imagen Docker') {
+            steps {
+                dir('template-main/RA5/RA5_1') {
+                    script {
+                        sh 'docker build -t calculadora-app .'
+                    }
+                }
+            }
+        }
+
+        stage('Ejecutar contenedor') {
+            steps {
+                script {
+                    sh 'docker run --rm --name calculadora calculadora-app'
+                }
+            }
+        }
+
+        stage('Ejecutar tests en Docker') {
+            steps {
+                script {
+                    sh 'docker run --rm calculadora-app python3 test_calculator.py'
+                }
+            }
+        }
+
+        stage('Docker Compose up') {
+            steps {
+                dir('template-main/RA5/RA5_1') {
+                    script {
+                        sh 'docker-compose up --build -d'
+                    }
+                }
+            }
+        }
+
+        stage('Docker Compose down') {
+            steps {
+                dir('template-main/RA5/RA5_1') {
+                    script {
+                        sh 'docker-compose down'
+                    }
+                }
+            }
+        }
+    }
+}
