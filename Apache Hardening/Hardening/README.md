@@ -165,9 +165,6 @@ Si la configuración es correcta, recibirás la respuesta HTTP 403 Forbidden:
 ## Descripción
 En esta parte instalaremos Apache con el módulo `mod_evasive`, el cual ayuda a mitigar ataques de denegación de servicio (DoS). Además, crearemos una imagen Docker que automatice la instalación y configuración del módulo. Toda esta configuración está en el Dockerfile.
 
-### [Configuración del Dockerfile](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA3/RA3_1/RA3_1_1/Assets/Evitar_ataques_DDOS/Dockerfile)
-### [Fichero evasive.conf](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA3/RA3_1/RA3_1_1/Assets/Evitar_ataques_DDOS/evasive.conf)
-
 Para realizar las pruebas vamos a ejecutar el siguiente comando, el cuál esto simulará 1000 solicitudes concurrentes con 50 conexiones simultáneas. Si el módulo está funcionando correctamente, debería empezar a rechazar peticiones y mostrar errores 403 en el informe.
 
 ![Evitar ataques DDOS](./Assets/9.png)
