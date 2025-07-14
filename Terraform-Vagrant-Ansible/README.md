@@ -6,7 +6,7 @@ Terraform es una herramienta que permite definir y desplegar infraestructura med
 
 Ansible es una herramienta de automatización de configuración que permite gestionar y configurar sistemas a través de archivos YAML llamados playbooks, sin necesidad de instalar agentes en los nodos. Es ideal para instalar servicios, aplicar parches o desplegar aplicaciones en servidores ya aprovisionados.
 
-No obstante, mientras desarrollábamos esta práctica, recibimos una serie de problemas con Terraform, debido a que el origen de los proveedores no eran oficiales, lo que generaba un sinfin de errores debido a estos, finalmente conseguimos hacer con Terraform que se crearan las VM, pero seguía generando errores, en este caso, eran errores con los adaptadores de red, que al no generarlos como tocaba, simplemente los convertía en datos y no realizaba nada más, tras haber investigado, no hemos podido descubrir como solucionarlo, por lo que hemos tenido que utilizar Vagrant como backend de virtualización, ¿Pero que es Vagrant?
+No obstante, mientras desarrollábamos este proyecto, recibimos una serie de problemas con Terraform, debido a que el origen de los proveedores no eran oficiales, lo que generaba un sinfin de errores debido a estos, finalmente conseguimos hacer con Terraform que se crearan las VM, pero seguía generando errores, en este caso, eran errores con los adaptadores de red, que al no generarlos como tocaba, simplemente los convertía en datos y no realizaba nada más, tras haber investigado hemos decidido utilizar Vagrant como backend de virtualización, ¿Pero que es Vagrant?
 
 Vagrant es una herramienta que facilita la creación y gestión de entornos de desarrollo virtualizados. Se integra fácilmente con VirtualBox y otras plataformas, permitiendo levantar máquinas virtuales de manera automatizada y sencilla.
 
@@ -20,8 +20,8 @@ Vagrant es una herramienta que facilita la creación y gestión de entornos de d
 
 En esta parte tenemos que realizar solo la implementación de la VM para que se encuentre funcional y podamos acceder de manera remota con SSH, para ello hemos hecho uso de el fichero main.tf, el cuál lo único que hacer es decir que el aprovisionador se ejecutará de manera local, y lo que hará será llamar a vagrant up para que ejecute el fichero Vagrantfile y de esa manera se automatice la creación de la VM, los ficheros utilizados son los siguientes:
 
-- [main.tf](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA5/RA5_2/main.tf)
-- [Vagrantfile](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA5/RA5_2/Vagrantfile)
+- [main.tf](https://github.com/Aro27/Proyectos/blob/main/Terraform-Vagrant-Ansible/main.tf)
+- [Vagrantfile](https://github.com/Aro27/Proyectos/blob/main/Terraform-Vagrant-Ansible/Vagrantfile)
 
 En este caso, la configuración del Vagrantfile en este apartado era solo hasta el primer comentario en el fichero, sin incluirlo, ya que lo único que queríamos conseguir es que se automatizara la creación de la VM.
 
@@ -41,9 +41,7 @@ De esta manera, hemos podido completar esta primera parte, por lo que a continua
 
 En este aparado, lo que haremos será que a través de Ansible, indicaremos que queremos que se actualicen los repositorios y los paquetes, además de que instalaremos el servidor Apache, para ello hacemos uso del fichero de Ansible llamado playbook.yml, y además ahora ya hacemos uso de todo el fichero de Vagrantfile, donde en el primer comentario, lo que hacemos es forzar la sincronización de carpetas compartidas para poder hacer uso del fichero .yml, ya que sino genera un error con los Guest Addition de VirtualBox, y tras eso, añadimos la configuración de que haremos uso del .yml, los ficheros utilizados son los dos mismos que antes, pero ahora con Ansible también.
 
-- [main.tf](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA5/RA5_2/main.tf)
-- [Vagrantfile](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA5/RA5_2/Vagrantfile)
-- [playbook.yml](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA5/RA5_2/playbook.yml)
+- [playbook.yml](https://github.com/Aro27/Proyectos/blob/main/Terraform-Vagrant-Ansible/playbook.yml)
 
 En este apartado, el fichero de playbook solo tenía de contenido hasta la instalación de apache, ya que el final del fichero es del útlimo apartado.
 
