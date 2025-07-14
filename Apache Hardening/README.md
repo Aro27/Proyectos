@@ -10,6 +10,5 @@ Para poder acceder a nuestras imagenes en DockerHub, accederemos al siguiente en
 
 # Prácticas
 
-* [3.1. Apache Hardening](https://github.com/alvaromespen/pps-10003375/tree/main/template-main/RA3/RA3_1/RA3_1_1)
-* [3.2. Certificados](https://github.com/alvaromespen/pps-10003375/tree/main/template-main/RA3/RA3_1/RA3_1_2)
-* [3.1.3. Apache Hardening Best Practices](https://github.com/alvaromespen/pps-10003375/tree/main/template-main/RA3/RA3_1/RA3_1_3)
+* [Apache Hardening](https://github.com/Aro27/Proyectos/tree/main/Apache%20Hardening/Hardening)
+* [Apache Hardening Best Practices](https://github.com/Aro27/Proyectos/tree/main/Apache%20Hardening/Best%20Practices)
