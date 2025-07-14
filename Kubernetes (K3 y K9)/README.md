@@ -10,16 +10,16 @@ Hemos dividido la actividad en 3 partes.
 
 En esta parte, nuestro propósito es lograr la instalación funcional de un clúster K3s en modo single-node, comprendiendo los pasos básicos de despliegue, configuración y validación de servicios en un entorno sencillo. 
 
-[Instalación y despliegue en modo Single-Node](https://github.com/alvaromespen/pps-10003375/tree/main/template-main/RA5/RA5_4/RA5_4_1)
+[Instalación y despliegue en modo Single-Node](https://github.com/Aro27/Proyectos/tree/main/Kubernetes%20(K3%20y%20K9)/Single%20Node)
 
 **Parte 2: Instalación y despliegue en modo High Availability (HA)**
 
 En este ejercicio, nos propusimos configurar un entorno K3s en alta disponibilidad, utilizando múltiples nodos server y el backend de almacenamiento embebido etcd. El objetivo principal es comprender cómo lograr la tolerancia a fallos, el mantenimiento del estado del clúster ante caídas parciales y el comportamiento de los pods en escenarios distribuidos. Además, reforzamos el uso de K9s como herramienta de validación visual y diagnóstico de los componentes del clúster.
 
-[Instalación y despliegue en modo High Availability (HA)](https://github.com/alvaromespen/pps-10003375/tree/main/template-main/RA5/RA5_4/RA5_4_2)
+[Instalación y despliegue en modo High Availability (HA)](https://github.com/Aro27/Proyectos/tree/main/Kubernetes%20(K3%20y%20K9)/Despliegue%20en%20modo%20High%20Availability%20(HA))
 
 **Parte 3: Despliegue de docker-compose en K3s con validación en K9s**
 
 Nos planteamos como meta traducir un archivo docker-compose.yml tradicional a formatos compatibles con Kubernetes, con el fin de desplegar dichos servicios sobre un clúster K3s. El objetivo es identificar las diferencias entre ambas formas de orquestación y comprobar su interoperabilidad. Posteriormente, validar la correcta ejecución de los recursos mediante K9s, con el fin de verificar que el comportamiento esperado se mantenía en el entorno Kubernetes.
 
-[Despliegue de docker-compose en K3s con validación en K9s](https://github.com/alvaromespen/pps-10003375/tree/main/template-main/RA5/RA5_4/RA5_4_3)
+[Despliegue de docker-compose en K3s con validación en K9s](https://github.com/Aro27/Proyectos/tree/main/Kubernetes%20(K3%20y%20K9)/Despliegue%20de%20docker-compose%20en%20K3s%20con%20validaci%C3%B3n%20en%20K9s)
