@@ -40,8 +40,8 @@ Estructura del proyecto:
 
 Si se desea echar un vistazo tanto al Jenkinsfile como al Dockerfile a continuación están unos enlaces directos.
 
-- [Jenkinsfile](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA5/RA5_1/Jenkinsfile)
-- [Dockerfile](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA5/RA5_1/Dockerfile)
+- [Jenkinsfile](https://github.com/Aro27/Proyectos/blob/main/Jenkins/Jenkinsfile)
+- [Dockerfile](https://github.com/Aro27/Proyectos/blob/main/Jenkins/Dockerfile)
 
 Para esta parte de la práctica hemos descargado un docker con Jenkins para acelerar el proceso de instalación, en este docker, hemos tenido que realizar la instalación de python, ya que no iba por defecto, y también hemos tenido que configurar ngrok para utilizarlo en github, ya que este no resuelve direcciones privadas haciendo uso de webhook.
 
@@ -91,8 +91,8 @@ La estructura del proyecto en esta parte es la siguiente:
 
 Los enlaces a los nuevos ficheros creados son los siguientes:
 
-- [Docker-compose.yml](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA5/RA5_1/docker-compose.yml)
-- [Jenkinsfile.docker](https://github.com/alvaromespen/pps-10003375/blob/main/template-main/RA5/RA5_1/Jenkinsfile.docker)
+- [Docker-compose.yml](https://github.com/Aro27/Proyectos/blob/main/Jenkins/docker-compose.yml)
+- [Jenkinsfile.docker](https://github.com/Aro27/Proyectos/blob/main/Jenkins/Jenkinsfile.docker)
 
 En este caso, hemos tenido que instar tanto Docker como docker-compose en nuestro docker, ya que no nos dejaba realizar las pruebas sin ellos, además hemos tenido que ejecutar el docker run de la siguiente manera para que pudieramos usar dockers dentro de nuestro docker, usando como base una imagen del docker que estabamos utilizando anteriormente.
 
